@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+
+<body>
+    <script>
+        // Membuat object kosong
+        // const person = {};
+
+        // // Menambah atau merubah property/attribute
+        // person["nama"] = "Septiana Nugraha";
+        // person["alamat"] = "Kota Bandung";
+        // person["umur"] = 21;
+        // person["hobi"] = "Main Game";
+
+        // Membuat object beserta property/attribute
+        const person = {
+
+            nama: "Septiana Nugraha",
+            alamat: "Kota Bandung",
+            umur: 21,
+            hobi: "Main Game"
+        };
+
+        // Menambahkan data pada object berdasarkan property/attribute
+        console.info(`Nama : ${person.nama}`);
+        console.info(`Alamat : ${person.alamat}`);
+        console.info(`Umur : ${person.umur}`);
+        console.info(`Hobi : ${person.hobi}`);
+
+        console.table(person);
+
+        // Menghapus property/attribute
+        delete person["hobi"];
+
+        console.table(person);
+    </script>
+</body>
+
+</html>

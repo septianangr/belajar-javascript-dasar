@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Operator</title>
+</head>
+
+<body>
+    <script>
+        // Mengecek property/attribute pada object
+        const names = {
+            fullName: "Septiana Nugraha"
+        };
+
+        if ("fullName" in names) {
+            document.writeln(`<p>Halo ${names.fullName}</p>`);
+        } else {
+            document.writeln("<p>Halo</p>");
+        }
+
+        // Mengecek property/attribute pada object
+        const person = {
+            firstName: "Septiana",
+            middleName: undefined,
+            lastName: "Nugraha"
+        };
+
+        if ("middleName" in person) {
+            document.writeln(`<p>Halo ${person.middleName}</p>`);
+        } else {
+            document.writeln("<p>Halo</p>");
+        }
+
+        // Mengecek index pada array
+        const person2 = [null, "Nugraha"];
+        if (0 in person2) {
+            document.writeln(`<p>Halo ${person2[0]}</p>`);
+        } else {
+            document.writeln("<p>Halo</p>");
+        }
+    </script>
+</body>
+
+</html>

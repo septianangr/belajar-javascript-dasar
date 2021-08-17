@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Rest Parameter</title>
+</head>
+
+<body>
+    <script>
+        function sum(name, ...data) {
+            let total = 0;
+            for (const item of data) {
+                total += item;
+            }
+            document.writeln(`<p>Total ${name} is ${total}</p>`);
+        }
+
+        sum("Orange", 10, 50, 100, 150, 200);
+        sum("Apple", 10, 50, 100, 150, 200, 250);
+        sum("Banana", 10, 50, 100, 150, 200, 250, 300);
+
+        // Merubah array menjadi rest parameter dengan spread syntax
+        const values = [10, 50, 100, 150, 200, 250, 300, 350];
+        sum("Mango", ...values);
+
+
+        // Arguments parameter
+        function oldSum() {
+            let total = 0;
+            for (const argument of arguments) {
+                total += argument;
+            }
+            document.writeln(`<p>Total is ${total}</p>`);
+        }
+
+        oldSum(10, 50, 100, 150, 200, 250, 300, 350, 400)
+    </script>
+</body>
+
+</html>

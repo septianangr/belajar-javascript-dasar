@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masalah Variabel Var</title>
+</head>
+
+<body>
+    <script>
+        // Global scope
+        let i = 20;
+
+        for (let i = 0; i < 10; i++) {
+            // Local scope
+            console.info(`Let Local ${i}`);
+        }
+
+        console.info(`Let Global ${i}`);
+
+        // Global scope
+        var j = 20;
+
+        for (var j = 0; j < 10; j++) {
+            // Local scope
+            console.info(`Var Local ${j}`);
+        }
+
+        console.info(`Var Global ${j}`);
+    </script>
+</body>
+
+</html>

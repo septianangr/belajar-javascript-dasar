@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Method Arrow Function</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            name: "Septiana Nugraha",
+            sayHello: (name) => {
+                // Pada arrow function di object method kata kunci this tidak dapat digunakan
+                console.info(this); // Window
+                console.info(`Hello ${name}`)
+            }
+        }
+
+        person.sayHello("Septiana Nugraha");
+    </script>
+</body>
+
+</html>
